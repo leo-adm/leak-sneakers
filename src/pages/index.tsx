@@ -71,7 +71,7 @@ export default function Home() {
         <div className="header">
           <i id="logo" className="fa-sharp fa-solid fa-user-secret"></i>
           <h1>LEAK SNEAKERS</h1>
-          <form className="search-form" onSubmit={searchProducts}>
+          <form className="search-form" onSubmit={searchProducts} style={!!selectedProduct ? {display: 'none'} : {display: 'flex'}}>
             <div className="input-container">
               <label htmlFor="search">SKU</label>
               <input value={searchText}
