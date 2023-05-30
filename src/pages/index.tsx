@@ -49,7 +49,7 @@ export default function Home() {
       releaseDate
     }
 
-    const response = await fetch("http://localhost:3000/api/webhooks", {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/webhooks`, {
       method: "POST", 
       headers: { "content-type": "application/json" }, 
       body: JSON.stringify(payload)
